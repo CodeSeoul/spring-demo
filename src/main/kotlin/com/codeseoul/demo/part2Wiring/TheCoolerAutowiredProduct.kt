@@ -12,6 +12,6 @@ class TheCoolerAutowiredProduct(
 }
 
 @Component
-class ThingToBeAutowired{
+class ThingToBeAutowired {
     override fun toString(): String = this.javaClass.simpleName
 }

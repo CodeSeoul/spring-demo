@@ -7,6 +7,7 @@ import com.codeseoul.demo.part1Beans.partOneIntro
 import com.codeseoul.demo.part1Beans.partOneManyOfSameType
 import com.codeseoul.demo.part2Wiring.partTwoAutoWiring
 import com.codeseoul.demo.part2Wiring.partTwoManualWiring
+import com.codeseoul.demo.part3Abstraction.partThreeUsingAbstractions
 
 
 //import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -27,4 +28,5 @@ fun main() {
     partOneAddingBeansManually()
     partTwoManualWiring()
     partTwoAutoWiring()
+    partThreeUsingAbstractions()
 }
