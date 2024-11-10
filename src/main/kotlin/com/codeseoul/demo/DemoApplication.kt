@@ -8,6 +8,9 @@ import com.codeseoul.demo.part1Beans.partOneManyOfSameType
 import com.codeseoul.demo.part2Wiring.partTwoAutoWiring
 import com.codeseoul.demo.part2Wiring.partTwoManualWiring
 import com.codeseoul.demo.part3Abstraction.partThreeUsingAbstractions
+import com.codeseoul.demo.part4Lifecycle.partFourPrototypeBeans
+import com.codeseoul.demo.part4Lifecycle.partFourSingletonBeans
+import com.codeseoul.demo.part4Lifecycle.partFourStereotypesAndLazyInit
 
 
 //import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -29,4 +32,7 @@ fun main() {
     partTwoManualWiring()
     partTwoAutoWiring()
     partThreeUsingAbstractions()
+    partFourSingletonBeans()
+    partFourPrototypeBeans()
+    partFourStereotypesAndLazyInit()
 }
