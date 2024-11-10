@@ -1,4 +1,4 @@
-package com.codeseoul.demo.partThreeAbstraction
+package com.codeseoul.demo.part3Abstraction
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 

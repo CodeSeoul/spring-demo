@@ -1,4 +1,4 @@
-package com.codeseoul.demo.partOneBeans
+package com.codeseoul.demo.part1Beans
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
@@ -43,5 +43,5 @@ class SameTypesConfig {
 }
 
 @Configuration
-@ComponentScan(basePackages = ["com.codeseoul.demo.partOneBeans.scanTarget"])
+@ComponentScan(basePackages = ["com.codeseoul.demo.part1Beans.scanTarget"])
 class ComponentScanConfig

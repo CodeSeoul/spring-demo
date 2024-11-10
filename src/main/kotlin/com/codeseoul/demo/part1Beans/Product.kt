@@ -1,4 +1,4 @@
-package com.codeseoul.demo.partOneBeans
+package com.codeseoul.demo.part1Beans
 
 class Product(
     private val name: String = "default name"

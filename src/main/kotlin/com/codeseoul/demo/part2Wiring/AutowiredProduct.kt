@@ -1,4 +1,4 @@
-package com.codeseoul.demo.partTwoWiring
+package com.codeseoul.demo.part2Wiring
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component

@@ -1,4 +1,4 @@
-package com.codeseoul.demo.partFiveAOP
+package com.codeseoul.demo.part5AOP
 
 import org.aspectj.lang.ProceedingJoinPoint
 import org.aspectj.lang.annotation.Around
@@ -28,8 +28,8 @@ class InterceptingLoggingAspect {
     @Around("@annotation(DetailedMeasureTime)")
     fun log(joinPoint: ProceedingJoinPoint): Any? {
         val methodName = joinPoint.signature.name
-        val args = joinPoint.args
-        println("method name: $methodName, arguments: ${args.toList()}")
+        val args = joinPoint.args.toList()
+        println("method name: $methodName, arguments: $args")
         val startTime = System.currentTimeMillis()
         val returned = joinPoint.proceed()
         val endTime = System.currentTimeMillis()
@@ -42,3 +42,26 @@ class InterceptingLoggingAspect {
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.FUNCTION)
 annotation class DetailedMeasureTime
+
+
+@Aspect
+@Component
+class MutatingLoggingAspect {
+    @Around("@annotation(DangerousAnnotation)")
+    fun log(joinPoint: ProceedingJoinPoint): Any? {
+        val methodName = joinPoint.signature.name
+        val args = joinPoint.args.toList()
+        println("method name: $methodName, original arguments: $args")
+        val startTime = System.currentTimeMillis()
+        val newArgs = arrayOf("50 kilograms of horse feed")
+        val returned = joinPoint.proceed(newArgs)
+        val endTime = System.currentTimeMillis()
+        println("time taken: ${endTime - startTime} milliseconds")
+        println("will return: $returned")
+        return returned
+    }
+}
+
+@Retention(AnnotationRetention.RUNTIME)
+@Target(AnnotationTarget.FUNCTION)
+annotation class DangerousAnnotation

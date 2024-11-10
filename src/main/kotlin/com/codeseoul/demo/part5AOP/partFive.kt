@@ -1,15 +1,21 @@
-package com.codeseoul.demo.partFiveAOP
+package com.codeseoul.demo.part5AOP
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 fun partFiveLoggingAspect() {
     val context = AnnotationConfigApplicationContext(PartFiveConfig::class.java)
     val orderService = context.getBean(OrderService::class.java)
-    orderService.placeOrder(productName = "2 gallon barrel of industrial grade glycine", amount = 5)
+    orderService.placeOrder("2 gallon barrel of industrial grade glycine")
 }
 
 fun partFiveLoggingAspectWithIntercept() {
     val context = AnnotationConfigApplicationContext(PartFiveConfig::class.java)
     val orderService = context.getBean(OrderService::class.java)
-    orderService.cancelOrder(productName = "galvanized square steel", amount = 3)
+    orderService.cancelOrder("galvanized square steel")
+}
+
+fun partFiveLoggingAspectWithInterceptMutation() {
+    val context = AnnotationConfigApplicationContext(PartFiveConfig::class.java)
+    val orderService = context.getBean(OrderService::class.java)
+    orderService.subscribeOrder("1 bag of dog food")
 }

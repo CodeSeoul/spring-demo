@@ -1,4 +1,4 @@
-package com.codeseoul.demo.partThreeAbstraction
+package com.codeseoul.demo.part3Abstraction
 
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.stereotype.Component

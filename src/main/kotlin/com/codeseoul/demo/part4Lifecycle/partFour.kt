@@ -1,4 +1,4 @@
-package com.codeseoul.demo.partFourLifecycle
+package com.codeseoul.demo.part4Lifecycle
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
