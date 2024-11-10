@@ -10,4 +10,6 @@ fun partFiveLoggingAspect() {
 
 fun partFiveLoggingAspectWithIntercept() {
     val context = AnnotationConfigApplicationContext(PartFiveConfig::class.java)
+    val orderService = context.getBean(OrderService::class.java)
+    orderService.cancelOrder(productName = "galvanized square steel", amount = 3)
 }

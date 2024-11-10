@@ -1,17 +1,18 @@
 package com.codeseoul.demo
 
-import com.codeseoul.demo.partZeroIntro.partZeroDiDemo
+import com.codeseoul.demo.partFiveAOP.partFiveLoggingAspect
+import com.codeseoul.demo.partFiveAOP.partFiveLoggingAspectWithIntercept
+import com.codeseoul.demo.partFourLifecycle.partFourPrototypeBeans
+import com.codeseoul.demo.partFourLifecycle.partFourSingletonBeans
+import com.codeseoul.demo.partFourLifecycle.partFourStereotypesAndLazyInit
 import com.codeseoul.demo.partOneBeans.partOneAddingBeansManually
 import com.codeseoul.demo.partOneBeans.partOneComponentScan
 import com.codeseoul.demo.partOneBeans.partOneIntro
 import com.codeseoul.demo.partOneBeans.partOneManyOfSameType
+import com.codeseoul.demo.partThreeAbstraction.partThreeUsingAbstractions
 import com.codeseoul.demo.partTwoWiring.partTwoAutoWiring
 import com.codeseoul.demo.partTwoWiring.partTwoManualWiring
-import com.codeseoul.demo.partThreeAbstraction.partThreeUsingAbstractions
-import com.codeseoul.demo.partFourLifecycle.partFourPrototypeBeans
-import com.codeseoul.demo.partFourLifecycle.partFourSingletonBeans
-import com.codeseoul.demo.partFourLifecycle.partFourStereotypesAndLazyInit
-import com.codeseoul.demo.partFiveAOP.partFiveLoggingAspect
+import com.codeseoul.demo.partZeroIntro.partZeroDiDemo
 
 
 //import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -42,4 +43,5 @@ fun main() {
     partFourStereotypesAndLazyInit()
     println()
     partFiveLoggingAspect()
+    partFiveLoggingAspectWithIntercept()
 }

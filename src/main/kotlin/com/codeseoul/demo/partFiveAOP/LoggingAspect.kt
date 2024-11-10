@@ -20,3 +20,25 @@ class LoggingAspect {
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.FUNCTION)
 annotation class MeasureTime
+
+
+@Aspect
+@Component
+class InterceptingLoggingAspect {
+    @Around("@annotation(DetailedMeasureTime)")
+    fun log(joinPoint: ProceedingJoinPoint): Any? {
+        val methodName = joinPoint.signature.name
+        val args = joinPoint.args
+        println("method name: $methodName, arguments: ${args.toList()}")
+        val startTime = System.currentTimeMillis()
+        val returned = joinPoint.proceed()
+        val endTime = System.currentTimeMillis()
+        println("time taken: ${endTime - startTime} milliseconds")
+        println("will return: $returned")
+        return returned
+    }
+}
+
+@Retention(AnnotationRetention.RUNTIME)
+@Target(AnnotationTarget.FUNCTION)
+annotation class DetailedMeasureTime
