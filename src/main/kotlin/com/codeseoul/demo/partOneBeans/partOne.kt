@@ -1,6 +1,6 @@
-package com.codeseoul.demo.part1Beans
+package com.codeseoul.demo.partOneBeans
 
-import com.codeseoul.demo.part1Beans.scanTarget.OtherProduct
+import com.codeseoul.demo.partOneBeans.scanTarget.OtherProduct
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 fun partOneIntro() {

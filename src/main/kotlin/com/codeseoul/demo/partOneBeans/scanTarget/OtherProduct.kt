@@ -1,4 +1,4 @@
-package com.codeseoul.demo.part1Beans.scanTarget
+package com.codeseoul.demo.partOneBeans.scanTarget
 
 import org.springframework.stereotype.Component
 

@@ -1,4 +1,4 @@
-package com.codeseoul.demo.part2Wiring
+package com.codeseoul.demo.partTwoWiring
 
 
 class ProductWithSku(

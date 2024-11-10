@@ -1,4 +1,4 @@
-package com.codeseoul.demo.part0Intro
+package com.codeseoul.demo.partZeroIntro
 
 
 class NoDependencyInjection() {
